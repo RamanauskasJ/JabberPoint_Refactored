@@ -22,9 +22,9 @@ class DemoPresentation extends Accessor {
 		slide.append(4, "Calling Jabberpoint without a filename");
 		slide.append(4, "will show this presentation");
 		slide.append(1, "Navigate:");
-		slide.append(3, "Next slide: PgDn or Enter");
-		slide.append(3, "Previous slide: PgUp or up-arrow");
-		slide.append(3, "Quit: q or Q");
+		slide.append(3, "Next slide: Right Arrow");
+		slide.append(3, "Previous slide: Left Arrow");
+		slide.append(3, "Quit: Escape");
 		presentation.append(slide);
 
 		slide = new Slide();
@@ -44,7 +44,7 @@ class DemoPresentation extends Accessor {
 		slide.append(2, "use File->Open from the menu.");
 		slide.append(1, " ");
 		slide.append(1, "This is the end of the presentation.");
-		slide.append(new BitmapItem(1, "JabberPoint.jpg"));
+		slide.append(new BitmapItem(1, "../JabberPoint.jpg"));
 		presentation.append(slide);
 	}
 
