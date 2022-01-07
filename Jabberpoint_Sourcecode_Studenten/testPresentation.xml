@@ -10,9 +10,9 @@
 		<item kind="text"  level="2">Gert Florijn, Mark van Elswijk, Marc Evers</item>
 		<item kind="text"  level="2">and Sylvia Stuurman</item>
 		<item kind="text"  level="1">Navigation:</item>
-		<item kind="text"  level="2">Next slide: PgDn or Enter</item>
-		<item kind="text"  level="2">Previous slide: PgUp or up-arrow</item>
-		<item kind="text"  level="2">Quit: q or Q</item>
+		<item kind="text"  level="2">Next slide: Right-arrow</item>
+		<item kind="text"  level="2">Previous slide: Left-arrow</item>
+		<item kind="text"  level="2">Quit: Escape</item>
 	</slide>
 	<slide>
 		<title>An almost empty slide</title>
@@ -24,13 +24,13 @@
 		<item kind="text"  level="1">course Design patterns of the Open university</item>
 		<item kind="text"  level="1">but is also used for the course OO1 of the NHL-Stenden university of applied sciences</item>
 		<item kind="text"  level="1"> </item>
-		<item kind="image"  level="2">logo-woordmerk_ou.gif</item>
-		<item kind="image"  level="2">logo_nhlstenden.jpg</item>
+		<item kind="image"  level="2">../logo-woordmerk_ou.gif</item>
+		<item kind="image"  level="2">../logo_nhlstenden.jpg</item>
 		<item kind="text"  level="1"> </item>
 		<item kind="text"  level="1">The exercise is developed by the SERC</item>
 		<item kind="text"  level="1">in collaboration with the Open university </item>
 		<item kind="text"  level="1"> </item>
-		<item kind="image"  level="2">serclogo_fc.jpg</item>
+		<item kind="image"  level="2">../serclogo_fc.jpg</item>
 	</slide>
 	<slide>
 		<title>JabberPoint: Levels and styles</title>
@@ -47,7 +47,7 @@
 		<item kind="text"  level="2">Load a presentation: File->Open</item>
 		<item kind="text"  level="1"> </item>
 		<item kind="text"  level="1">This is the end of the presentation.</item>
-		<item kind="image"  level="1">JabberPoint.jpg</item>
+		<item kind="image"  level="1">../JabberPoint.jpg</item>
 		<item kind="text"  level="1">Goodbye.</item>
 	</slide>
 </presentation>
