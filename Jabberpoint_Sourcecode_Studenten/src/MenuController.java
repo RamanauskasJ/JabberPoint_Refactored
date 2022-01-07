@@ -6,6 +6,7 @@ import java.awt.MenuShortcut;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.util.Iterator;
 
 import javax.swing.JOptionPane;
 
@@ -38,7 +39,7 @@ public class MenuController extends MenuBar {
 	protected static final String SAVE = "Save";
 	protected static final String VIEW = "View";
 	
-	protected static final String TESTFILE = "testPresentation.xml";
+	protected static final String TESTFILE = "../testPresentation.xml";
 	protected static final String SAVEFILE = "savedPresentation.xml";
 	
 	protected static final String IOEX = "IO Exception: ";
@@ -110,7 +111,19 @@ public class MenuController extends MenuBar {
 			public void actionPerformed(ActionEvent actionEvent) {
 				String pageNumberStr = JOptionPane.showInputDialog((Object)PAGENR);
 				int pageNumber = Integer.parseInt(pageNumberStr);
-				presentation.setSlideNumber(pageNumber - 1);
+				int slideNr = presentation.getCurrentSlideNumber() + 1;
+				if(pageNumber <= 0 )
+				{
+					System.out.println("Slide range is out of bounds. Number of slides: " + slideNr + " of " + presentation.getSize());
+				}
+				else if (pageNumber > presentation.getSize())
+				{
+					System.out.println("Slide range is out of bounds. Number of slides: " + slideNr + " of " + presentation.getSize());
+				}
+				else
+				{
+					presentation.setSlideNumber(pageNumber - 1);
+				}
 			}
 		});
 		add(viewMenu);
