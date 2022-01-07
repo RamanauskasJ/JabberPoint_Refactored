@@ -110,19 +110,26 @@ public class MenuController extends MenuBar {
 		menuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent actionEvent) {
 				String pageNumberStr = JOptionPane.showInputDialog((Object)PAGENR);
-				int pageNumber = Integer.parseInt(pageNumberStr);
-				int slideNr = presentation.getCurrentSlideNumber() + 1;
-				if(pageNumber <= 0 )
+				Integer slideNr = presentation.getCurrentSlideNumber() + 1;
+				try
 				{
-					System.out.println("Slide range is out of bounds. Number of slides: " + slideNr + " of " + presentation.getSize());
+					int pageNumber = Integer.parseInt(pageNumberStr);
+					if(pageNumber <= 0 )
+					{
+						System.out.println("Slide range is out of bounds. Number of slides: " + slideNr + " of " + presentation.getSize());
+					}
+					else if (pageNumber > presentation.getSize())
+					{
+						System.out.println("Slide range is out of bounds. Number of slides: " + slideNr + " of " + presentation.getSize());
+					}
+					else
+					{
+						presentation.setSlideNumber(pageNumber - 1);
+					}
 				}
-				else if (pageNumber > presentation.getSize())
+				catch (NumberFormatException e)
 				{
-					System.out.println("Slide range is out of bounds. Number of slides: " + slideNr + " of " + presentation.getSize());
-				}
-				else
-				{
-					presentation.setSlideNumber(pageNumber - 1);
+					System.out.println("No input was detected");
 				}
 			}
 		});
